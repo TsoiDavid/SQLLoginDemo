@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8453FA4A1CA4D13B000E22CD /* YTKKeyValueStore+YTKKeyValueStore___Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453FA491CA4D13B000E22CD /* YTKKeyValueStore+YTKKeyValueStore___Extension.m */; };
 		845BC0391CA3CF6C006A316B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845BC0381CA3CF6C006A316B /* main.m */; };
 		845BC03C1CA3CF6C006A316B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845BC03B1CA3CF6C006A316B /* AppDelegate.m */; };
 		845BC03F1CA3CF6C006A316B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845BC03E1CA3CF6C006A316B /* ViewController.m */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8453FA481CA4D13B000E22CD /* YTKKeyValueStore+YTKKeyValueStore___Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YTKKeyValueStore+YTKKeyValueStore___Extension.h"; sourceTree = "<group>"; };
+		8453FA491CA4D13B000E22CD /* YTKKeyValueStore+YTKKeyValueStore___Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YTKKeyValueStore+YTKKeyValueStore___Extension.m"; sourceTree = "<group>"; };
 		845BC0341CA3CF6B006A316B /* SQLLoginDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQLLoginDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845BC0381CA3CF6C006A316B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		845BC03A1CA3CF6C006A316B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -199,6 +202,8 @@
 			children = (
 				845BC08C1CA3DCE9006A316B /* YTKKeyValueStore.h */,
 				845BC08D1CA3DCE9006A316B /* YTKKeyValueStore.m */,
+				8453FA481CA4D13B000E22CD /* YTKKeyValueStore+YTKKeyValueStore___Extension.h */,
+				8453FA491CA4D13B000E22CD /* YTKKeyValueStore+YTKKeyValueStore___Extension.m */,
 				845BC0911CA3EC2E006A316B /* UserDB.h */,
 				845BC0921CA3EC2E006A316B /* UserDB.m */,
 			);
@@ -341,6 +346,7 @@
 				845BC03C1CA3CF6C006A316B /* AppDelegate.m in Sources */,
 				845BC08E1CA3DCE9006A316B /* YTKKeyValueStore.m in Sources */,
 				845BC0391CA3CF6C006A316B /* main.m in Sources */,
+				8453FA4A1CA4D13B000E22CD /* YTKKeyValueStore+YTKKeyValueStore___Extension.m in Sources */,
 				845BC07F1CA3D697006A316B /* FMDatabase.m in Sources */,
 				845BC0811CA3D697006A316B /* FMDatabasePool.m in Sources */,
 				845BC0831CA3D697006A316B /* FMResultSet.m in Sources */,
@@ -570,6 +576,7 @@
 				845BC0631CA3CF6C006A316B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		845BC0641CA3CF6C006A316B /* Build configuration list for PBXNativeTarget "SQLLoginDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -578,6 +585,7 @@
 				845BC0661CA3CF6C006A316B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		845BC0671CA3CF6C006A316B /* Build configuration list for PBXNativeTarget "SQLLoginDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -586,6 +594,7 @@
 				845BC0691CA3CF6C006A316B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

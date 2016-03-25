@@ -18,8 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     YTKKeyValueStore *store = [[YTKKeyValueStore alloc]initDBWithName:@"test.db"];
-    NSString *tableName = @"user_table";
-    [store createTableWithName:tableName];
+    NSString *tableName1 = @"user_table";
+    [store createTableWithName:tableName1];
+    NSString *tableName2 = @"game_table";
+    [store createTableWithName:tableName2];
+    NSString *tableName3 = @"home_table";
+    [store createTableWithName:tableName3];
 //    NSString *key = @"user_table";
 //    NSDictionary *user = @{@"id": @"", @"name": @"tangqiao", @"age": @30};
 //    [store putObject:user withId:key intoTable:tableName];

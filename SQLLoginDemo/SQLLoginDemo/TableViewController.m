@@ -8,9 +8,13 @@
 
 #import "TableViewController.h"
 #import "YTKKeyValueStore.h"
+#import "YTKKeyValueStore+YTKKeyValueStore___Extension.h"
 #import "UserDB.h"
 @interface TableViewController ()
-@property (nonatomic, strong) NSMutableArray *dataArray;
+@property (strong, nonatomic) NSMutableArray *dataArray;
+@property (strong, nonatomic) YTKKeyValueStore *store;
+
+@property (strong, nonatomic) IBOutlet UITableView *userTableView;
 @end
 
 @implementation TableViewController
@@ -20,28 +24,30 @@
     
     _dataArray = [[NSMutableArray alloc]init];
     
-    YTKKeyValueStore *store = [[YTKKeyValueStore alloc]initDBWithName:@"test.db"];
-    NSArray *array = [store getAllItemsFromTable:@"user_table"];
+    [self loadData];
     
+    
+}
+- (void)loadData {
+    _store = [[YTKKeyValueStore alloc]initDBWithName:@"test.db"];
+    NSArray *array = [_store getAllItemsFromTable:@"user_table"];
+    [_dataArray removeAllObjects];
     if (array.count > 0) {
         for (YTKKeyValueItem *item in array) {
             UserDB *db = [[UserDB alloc]initWithDictionary:item.itemObject];
             [_dataArray addObject:db];
         }
     }
-    
-    
+
+}
+- (IBAction)cleanAllUserInfo:(UIBarButtonItem *)sender {
+    [YTKKeyValueStore deleteAllUserItemFromDataBase];
+    [self loadData];
+    [self.userTableView reloadData];
 }
 
-#pragma mark - Table view data source
-
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Incomplete implementation, return the number of sections
-//    return 1;
-//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     return _dataArray.count;
 }
 
